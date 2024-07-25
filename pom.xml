@@ -3,11 +3,14 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.example</groupId>
-    <artifactId>helloworld</artifactId>
+    <artifactId>java-hello-world</artifactId>
     <version>1.0-SNAPSHOT</version>
     <properties>
         <maven.compiler.source>11</maven.compiler.source>
         <maven.compiler.target>11</maven.compiler.target>
+        <sonar.projectKey>Second</sonar.projectKey>
+        <sonar.host.url>http://43.205.110.19:9000</sonar.host.url>
+        <sonar.login>977ce34ec7d196b5996b193e4d7486e340c6f722</sonar.login>
     </properties>
     <build>
         <plugins>
@@ -17,18 +20,12 @@
                 <version>3.8.1</version>
             </plugin>
             <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-jar-plugin</artifactId>
-                <version>3.1.0</version>
-                <configuration>
-                    <archive>
-                        <manifest>
-                            <mainClass>HelloWorld</mainClass>
-                        </manifest>
-                    </archive>
-                </configuration>
+                <groupId>org.sonarsource.scanner.maven</groupId>
+                <artifactId>sonar-maven-plugin</artifactId>
+                <version>3.7.0.1746</version>
             </plugin>
         </plugins>
     </build>
 </project>
+
 
